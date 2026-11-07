@@ -1,0 +1,30 @@
+﻿{
+    "80": {
+        "server_type": "Public Web Server",
+        "criticality_score": 0.7,
+        "assumed_hourly_downtime_cost": 5000,
+        "assumed_breach_liability": 50000,
+        "assumed_cost_of_blocking_legit_traffic": 1000
+    },
+    "443": {
+        "server_type": "Secure Web Gateway",
+        "criticality_score": 0.9,
+        "assumed_hourly_downtime_cost": 10000,
+        "assumed_breach_liability": 250000,
+        "assumed_cost_of_blocking_legit_traffic": 2500
+    },
+    "22": {
+        "server_type": "Internal SSH/Admin",
+        "criticality_score": 1.0,
+        "assumed_hourly_downtime_cost": 2000,
+        "assumed_breach_liability": 500000,
+        "assumed_cost_of_blocking_legit_traffic": 500
+    },
+    "default": {
+        "server_type": "General Endpoint",
+        "criticality_score": 0.3,
+        "assumed_hourly_downtime_cost": 500,
+        "assumed_breach_liability": 5000,
+        "assumed_cost_of_blocking_legit_traffic": 100
+    }
+}

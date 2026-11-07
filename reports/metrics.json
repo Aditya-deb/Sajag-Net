@@ -1,0 +1,44 @@
+{
+    "Decision_Tree_Baseline": {
+        "accuracy": 0.9911311971184885,
+        "macro_f1": 0.9775951070876138,
+        "macro_pr_auc": 0.9664922784810009,
+        "benign_fpr": 0.0027,
+        "false_alarms_per_100k": 270.0,
+        "per_class_recall": {
+            "Benign": 0.9973,
+            "Brute Force": 0.96,
+            "DoS/DDoS": 0.9818333333333333,
+            "PortScan": 0.997,
+            "Web Attack": 0.8787878787878788
+        }
+    },
+    "LightGBM_No_Ports": {
+        "accuracy": 0.9984369159672432,
+        "macro_f1": 0.9967065518055526,
+        "macro_pr_auc": 0.9992942468715486,
+        "benign_fpr": 0.0013,
+        "false_alarms_per_100k": 130.0,
+        "per_class_recall": {
+            "Benign": 0.9987,
+            "Brute Force": 0.996,
+            "DoS/DDoS": 0.9986666666666667,
+            "PortScan": 0.998,
+            "Web Attack": 0.9906759906759907
+        }
+    },
+    "LightGBM_No_Ports_No_TCP": {
+        "accuracy": 0.9814128920452615,
+        "macro_f1": 0.9238184552476616,
+        "macro_pr_auc": 0.9915586800481438,
+        "benign_fpr": 0.02365,
+        "false_alarms_per_100k": 2365.0,
+        "per_class_recall": {
+            "Benign": 0.97635,
+            "Brute Force": 0.983,
+            "DoS/DDoS": 0.994,
+            "PortScan": 0.9975,
+            "Web Attack": 0.9627039627039627
+        }
+    }
+}
