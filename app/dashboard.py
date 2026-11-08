@@ -17,7 +17,7 @@ st.set_page_config(page_title="SajagNet: Network Threat Detection", layout="wide
 def load_artifacts():
     model = joblib.load(os.path.join("models", "lgbm_model.pkl"))
     le = joblib.load(os.path.join("models", "label_encoder.pkl"))
-    with open("feature_columns.json", "r") as f:
+    with open("models/feature_columns.json", "r") as f:
         feature_cols = json.load(f)
     try:
         with open(os.path.join("reports", "metrics.json"), "r") as f:
@@ -121,3 +121,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
