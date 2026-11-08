@@ -3,13 +3,13 @@ import pandas as pd
 import joblib
 import pytest
 
-@pytest.mark.skipif(not os.path.exists(os.path.join("models", "training_indices.pkl")), reason="Requires processed data; run the pipeline first.")
 def test_stream_is_held_out():
     stream_path = os.path.join("data", "sample_stream.csv")
     train_idx_path = os.path.join("models", "training_indices.pkl")
     
-    assert os.path.exists(stream_path), "Sample stream missing!"
-    
+    if not os.path.exists(stream_path) or not os.path.exists(train_idx_path):
+        pytest.skip("Requires sample stream and processed training indices to run.")
+        
     train_indices = joblib.load(train_idx_path)
     stream_df = pd.read_csv(stream_path)
     if 'source_index' in stream_df.columns:

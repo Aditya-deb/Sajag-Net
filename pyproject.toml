@@ -1,0 +1,16 @@
+﻿[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sajagnet"
+version = "0.1.0"
+description = "Network Threat Detection and Risk Analysis"
+dependencies = [
+    "streamlit",
+    "pandas",
+    "scikit-learn",
+    "lightgbm",
+    "shap",
+    "pytest"
+]
