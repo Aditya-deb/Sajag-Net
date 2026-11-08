@@ -1,4 +1,4 @@
-﻿# ALL NUMBERS HERE ARE ASSUMPTIONS FOR THE MVP
+# ALL NUMBERS HERE ARE ASSUMPTIONS FOR THE MVP
 
 RISK_WEIGHTS = {
     "threat_severity": 0.40,
@@ -6,7 +6,16 @@ RISK_WEIGHTS = {
     "confidence_score": 0.25
 }
 
-# New Policy Thresholds
+# Single source of truth for threat severity (0-1)
+THREAT_SEVERITY = {
+    "Brute Force": 0.7,
+    "Web Attack": 0.8,
+    "DoS/DDoS": 0.9,
+    "PortScan": 0.4
+}
+UNMAPPED_SEVERITY = 0.5
+
+# Policy thresholds
 MIN_CONFIDENCE_TO_BLOCK = 0.90
 MIN_CONFIDENCE_TO_INVESTIGATE = 0.50
 
