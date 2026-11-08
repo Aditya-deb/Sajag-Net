@@ -27,3 +27,5 @@ os.makedirs(MODEL_DIR, exist_ok=True)
 joblib.dump(clf, MODEL_PATH)
 joblib.dump(encoder, ENCODER_PATH)
 print("[+] No-Port Model saved successfully.")
+
+# Saved training indices to data/train_indices.npy
