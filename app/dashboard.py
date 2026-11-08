@@ -22,10 +22,11 @@ def load_artifacts():
     try:
         with open(os.path.join("reports", "metrics.json"), "r") as f:
             metrics = json.load(f)
-            fa_prim = metrics.get("primary_model_false_alarms_per_100k", 130)
-            fa_no = metrics.get("no_tcp_model_false_alarms_per_100k", 2365)
-    except:
-        fa_prim, fa_no = 130, 2365
+            fa_prim = metrics["LightGBM_No_Ports"]["false_alarms_per_100k"]
+            fa_no = metrics["LightGBM_No_Ports_No_TCP"]["false_alarms_per_100k"]
+    except Exception as e:
+        st.error(f"Could not read reports/metrics.json: {e}")
+        fa_prim, fa_no = float("nan"), float("nan")
     return model, le, feature_cols, fa_prim, fa_no
 
 @st.cache_resource
@@ -57,7 +58,7 @@ def main():
         
         with tab1:
             st.subheader("SIMULATED Traffic Stream")
-            st.dataframe(display_df, use_container_width=True)
+            st.dataframe(display_df, width="stretch")
             st.divider()
             st.subheader("Explain Prediction (SHAP)")
             sel_idx = st.selectbox("Select Flow Index", display_df.index)
