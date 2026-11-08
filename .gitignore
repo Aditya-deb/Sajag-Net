@@ -7,3 +7,5 @@ reports/*.html
 .env
 
 data/processed/
+
+*.egg-info/
