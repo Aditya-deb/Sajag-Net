@@ -2,6 +2,20 @@
 
 "Sajag" means alert or vigilant (Hindi/Sanskrit). Sajag-Net is a **prototype**, not a production security tool. It classifies network flows, explains each prediction, groups alerts into incidents, and ranks them by estimated business risk.
 
+## Screenshots
+
+Simulated traffic stream, with the predicted class and raw model score for each flow:
+
+![Simulated traffic stream](docs/stream.png)
+
+SHAP explanation for one selected flow:
+
+![SHAP explanation](docs/shap.png)
+
+Incidents with MITRE ATT&CK mapping, risk score, exposure and recommended action (all risk inputs are illustrative assumptions):
+
+![Incidents and risk](docs/incidents.png)
+
 ## What it does
 
 CIC-IDS2017 flows -> cleaning and de-duplication -> LightGBM classifier (5 classes: Benign, DoS/DDoS, PortScan, Brute Force, Web Attack) -> SHAP explanations -> incident builder -> risk engine -> Streamlit dashboard.
