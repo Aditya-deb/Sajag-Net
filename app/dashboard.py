@@ -11,7 +11,7 @@ from sajagnet.risk_engine import calculate_risk, ASSET_REGISTRY
 from sajagnet.incidents import build_incidents
 from sajagnet.config import ASSUMED_TRIAGE_COST_PER_ALERT, ASSUMED_DOWNTIME_HOURS, ASSUMED_P_BREACH, RISK_WEIGHTS, MIN_CONFIDENCE_TO_BLOCK, MIN_CONFIDENCE_TO_INVESTIGATE
 
-st.set_page_config(page_title="SajagNet: Network Threat Detection", layout="wide")
+st.set_page_config(page_title="Sajag-Net: Network Threat Detection", layout="wide")
 
 @st.cache_resource
 def load_artifacts():
@@ -34,7 +34,7 @@ def load_explainer(_model):
     return shap.TreeExplainer(_model)
 
 def main():
-    st.title("🛡️ SajagNet: Network Threat Detection")
+    st.title("🛡️ Sajag-Net: Network Threat Detection")
     st.sidebar.header("Traffic Controls")
     if st.sidebar.button("Load Simulated Traffic Sample", type="primary"):
         st.session_state['simulating'] = True

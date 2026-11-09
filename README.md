@@ -1,6 +1,6 @@
-﻿# SajagNet: Network Threat Detection and Risk Analysis
+﻿# Sajag-Net: Network Threat Detection and Risk Analysis
 
-"Sajag" means alert or vigilant (Hindi/Sanskrit). SajagNet is a **prototype**, not a production security tool. It classifies network flows, explains each prediction, groups alerts into incidents, and ranks them by estimated business risk.
+"Sajag" means alert or vigilant (Hindi/Sanskrit). Sajag-Net is a **prototype**, not a production security tool. It classifies network flows, explains each prediction, groups alerts into incidents, and ranks them by estimated business risk.
 
 ## What it does
 
